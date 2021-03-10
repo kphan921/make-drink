@@ -36,26 +36,35 @@ function buildDrinkList(drinks) {
 
   function buildDrink(drink) {
     let drinkName = document.createElement('h2')
-    let drinkImg = document.createElement('img')
-    let instr = document.createElement('h3')
-    let instruction = document.createElement('p')
-    let ingredients = document.createElement('h3')
     drinkName.textContent = drink.strDrink
+
+    let drinkImg = document.createElement('img')
     drinkImg.src = drink.strDrinkThumb
+
+let instrDiv = document.createElement('div')
+    let instr = document.createElement('h3')
+    instr.textContent = 'Instruction:'
+    let instruction = document.createElement('p')
     instruction.innerText = drink.strInstructions
-    instr.appendChild(instruction);
+    instrDiv.append(instr, instruction);
+    
+    
+    let ingredientDiv = document.createElement('div')
+    let ingredients = document.createElement('h3')
+    ingredients.textContent = 'Ingredients:'
+    
     const ingreList = document.createElement('ul')
     let ingre = Object.values(drink).slice(17, 32).filter(x => x !== null)
     ingre.forEach(x => {
       let li = document.createElement('li');
       li.textContent = x;
       ingreList.appendChild(li);
-      ingredients.appendChild(ingreList)
+      ingredientDiv.append(ingredients, ingreList)
     })
     let favoriteButton = document.createElement('button')
-    favoriteButton.textContent = '♥'
+    favoriteButton.textContent = 'Add To favorite'
     favoriteButton.style.color = 'red'
-    document.querySelector('.drink-container').append(drinkName, drinkImg, favoriteButton, ingredients, instruction)
+    document.querySelector('.drink-container').append(drinkName, drinkImg, favoriteButton, ingredientDiv, instrDiv)
     favoriteButton.addEventListener('click', () => handleFavorite(ingre, drink))
   }
 
