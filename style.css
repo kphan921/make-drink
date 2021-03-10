@@ -49,6 +49,6 @@ h1 {
 
 .drink-container {
     text-align: center;
-    border: grey solid 1px;
-    box-shadow: 3px 4px #E04B52
+    align-items: center;
+    border: none;
 }
