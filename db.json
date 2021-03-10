@@ -1,0 +1,51 @@
+{
+  "drinks": [
+    {
+      "name": "Long vodka",
+      "img": "https://www.thecocktaildb.com/images/media/drink/9179i01503565212.jpg",
+      "ingredients": [
+        "Vodka",
+        "Lime",
+        "Angostura bitters",
+        "Tonic water",
+        "Ice"
+      ],
+      "instructions": "Shake a tall glass with ice cubes and Angostura, coating the inside of the glass. Por the vodka onto this, add 1 slice of lime and squeeze juice out of remainder, mix with tonic, stir and voila you have a Long Vodka",
+      "id": 1
+    },
+    {
+      "name": "Coffee-Vodka",
+      "img": "https://www.thecocktaildb.com/images/media/drink/qvrrvu1472667494.jpg",
+      "ingredients": [
+        "Water",
+        "Sugar",
+        "Coffee",
+        "Vanilla",
+        "Vodka",
+        "Caramel coloring"
+      ],
+      "instructions": "Boil water and sugar until dissolved. Turn off heat. Slowly add dry instant coffee and continue stirring. Add a chopped vanilla bean to the vodka, then combine the cooled sugar syrup and coffee solution with the vodka. Cover tightly and shake vigorously each day for 3 weeks. Strain and filter. Its also best to let the sugar mixture cool completely so the vodka won't evaporate when its added. If you like a smoother feel to the liqueur you can add about 1 teaspoon of glycerine to the finished product.",
+      "id": 2
+    },
+    {
+      "name": "Vodka Russian",
+      "img": "https://www.thecocktaildb.com/images/media/drink/rpttur1454515129.jpg",
+      "ingredients": [
+        "Vodka",
+        "Schweppes Russchian"
+      ],
+      "instructions": "Mix it as a ordinary drink .",
+      "id": 3
+    },
+    {
+      "name": "Vodka And Tonic",
+      "img": "https://www.thecocktaildb.com/images/media/drink/lmj2yt1504820500.jpg",
+      "ingredients": [
+        "Vodka",
+        "Tonic water"
+      ],
+      "instructions": "Pour vodka into a highball glass over ice cubes. Fill with tonic water, stir, and serve.",
+      "id": 4
+    }
+  ]
+}
