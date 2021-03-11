@@ -43,10 +43,18 @@ h1 {
     border: none;
 }
 
+#drink-list {
+    list-style-type: none
+}
+
 
 .favorite-drink-container {
     display: flex;
     flex-direction: row;
     order: 5;
     flex-wrap: wrap;
+}
+
+h2 {
+    text-align: center;
 }

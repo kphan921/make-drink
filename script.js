@@ -61,10 +61,12 @@ let instrDiv = document.createElement('div')
       ingreList.appendChild(li);
       ingredientDiv.append(ingredients, ingreList)
     })
+    let buttonDiv = document.createElement('div')
     let favoriteButton = document.createElement('button')
     favoriteButton.textContent = 'Add To favorite'
     favoriteButton.style.color = 'red'
-    document.querySelector('.drink-container').append(drinkName, drinkImg, favoriteButton, ingredientDiv, instrDiv)
+    buttonDiv.appendChild(favoriteButton)
+    document.querySelector('.drink-container').append(drinkName, drinkImg, buttonDiv, ingredientDiv, instrDiv)
     favoriteButton.addEventListener('click', () => handleFavorite(ingre, drink))
   }
 
@@ -98,7 +100,10 @@ let instrDiv = document.createElement('div')
     let drinkImg = document.createElement('img')
     drinkName.textContent = drink.name
     drinkImg.src = drink.img
-    drinkDiv.append(drinkName, drinkImg)
+    drinkImg.width = 220
+    drinkImg.height = 240
+    drinkDiv.append(drinkName, drinkImg)  
+
     favorites.appendChild(drinkDiv)
   }
 
