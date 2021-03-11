@@ -96,15 +96,31 @@ let instrDiv = document.createElement('div')
   function appendFavoriteDrink(drink) {
     const favorites = document.querySelector('.favorite-drink-container')
     let drinkDiv = document.createElement('div')
+    drinkDiv.id = drink.id
     let drinkName = document.createElement('h4')
     let drinkImg = document.createElement('img')
+    let buttonDiv = document.createElement('div')
+    let removeButton = document.createElement('button')
+    buttonDiv.appendChild(removeButton)
+    removeButton.innerText = 'Remove Drink'
+    removeButton.addEventListener('click', (e) => removeFromFavorites(e))
     drinkName.textContent = drink.name
     drinkImg.src = drink.img
-    drinkImg.width = 220
-    drinkImg.height = 240
-    drinkDiv.append(drinkName, drinkImg)  
-
+    drinkImg.width = 200
+    drinkImg.height = 200
+    drinkDiv.append(drinkName, drinkImg, buttonDiv)
+    drinkDiv.style.textAlign = 'center'
     favorites.appendChild(drinkDiv)
+  }
+  
+  function removeFromFavorites(e) {
+    let drinkID = e.target.parentElement.parentElement.id
+    fetch(`http://localhost:3000/drinks/${drinkID}`, {
+      method: 'DELETE'
+    })
+    .then(res => res.json())
+    .then(data => document.getElementById(drinkID).remove())
+    .catch(error => console.log(error))
   }
 
   const addBtn = document.querySelector("#choose-drink");
